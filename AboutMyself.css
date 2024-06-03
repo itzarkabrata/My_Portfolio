@@ -1,0 +1,738 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&family=Roboto+Slab&display=swap');
+
+*{
+    margin: 0;padding: 0;
+    /* overflow: hidden; */
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Oswald', sans-serif;
+    background-image: repeating-linear-gradient(rgb(86, 175, 216),rgba(47, 47, 233, 0.808),rgba(84, 84, 243, 0.808),rgb(240, 240, 131));
+}
+body img{
+    box-shadow: 3px 3px 8px black;
+}
+body a{
+    text-decoration: none;
+    color: black;
+}
+header .hamburger{
+    height: 60px;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    transition-duration: 0.4s;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+}
+header .sticky{
+    /* background-color: rgba(8, 8, 143, 0.808); */
+    background-color: black;
+    box-shadow: 2px 2px 10px black;
+    height: 40px;
+    padding: 7px;
+}
+header .hamburger #h_icon{
+    margin: 0px 10px;
+    z-index: 10;
+    padding: 3px 0px 0px 0px;
+    filter: brightness(1.5);
+}
+header .hamburger #h_icon img{
+    box-shadow: none;
+}
+header .hamburger #heading{
+    font-size: 25px;
+    font-weight: 600;
+    color: white;
+    text-shadow: 2px 2px 6px black;
+    margin: 0px 40px;
+}
+header .hamburger #heading span{
+    color: rgb(250, 182, 93);
+}
+
+
+/* Menu Slider CSS */
+
+li{
+    list-style: none;
+}
+header .menu #item1 p,#item2 p,#item3 p,#item4 p{
+    padding: 15px;
+    border: 1px solid black;
+    z-index: 10;
+}
+header .menu #sub1,#sub2,#sub3,#sub4,#sub6{
+    padding: 15px;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-image: linear-gradient(rgb(240, 240, 131),rgb(252, 199, 199));
+}
+header .menu #subAcademic,#subDownloads,#subProjects{
+    display: inline-block;
+    position: absolute;
+    width: 150px;
+    z-index: 5;
+    visibility: hidden;
+    filter: opacity(0);
+    transition-duration: 0.3s;
+}
+header .menu #items #subAcademic_phone,#subDownloads_phone,#subProjects_phone{
+    display: none;
+    padding: 10px;
+    font-size: 15px;
+}
+header .menu #subAcademic{
+    top: 59px;
+    left: 352px;
+}
+header .menu #subDownloads{
+    top: 117px;
+    left: 352px
+}
+header .menu #subProjects{
+    top: 175px;
+    left: 352px
+}
+header .menu #items{
+    height: fit-content;
+    background-image: linear-gradient(rgb(240, 240, 131),rgb(252, 199, 199));
+    border: 0.5px solid black;
+    width: 350px;
+    position: absolute;
+    z-index: 5;
+    display: inline-block;
+    font-size: 18px;
+    box-shadow: 2px 2px 10px black;
+}
+header .menu{
+    transform: translateX(-450px);
+    transition-timing-function: linear;
+    transition-duration: 0.2s;
+    position: fixed;
+    top: 78px;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    filter: opacity(0);
+}
+header .stickyMenu{
+    top: 54px;
+}
+
+
+
+
+
+
+
+
+
+main .content{
+    display: flex;
+    padding: 40px 50px 40px 20px;
+    height: fit-content;
+    /* border: 1px solid black; */
+    justify-content: center;
+    align-items: center;
+    line-height: 28px;
+    margin-top: 80px;
+}
+main .content #text{
+    /* border: 1px solid black; */
+    padding: 0px 40px;
+    font-size: 18px;
+}
+main .content #text big{
+    font-size: 45px;
+}
+main .content #text b{
+    font-size: 20px;
+    color: white;
+    text-shadow: 0.5px 0.5px 3px black;
+}
+main .content #text span b{
+    color: blue;
+    text-shadow: none;
+    font-size: 16px;
+}
+/* animation written in line-266 */
+/* main .content #image{
+    border: 1px solid black;
+    background-image: url("/image/shipCraft.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 400px;
+    width: 20%;
+    animation: imageChanger 30s linear infinite ;
+} */
+
+main .content #image{
+    /* border: 1px solid black; */
+    height: fit-content;
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+}
+main .content #image img{
+    margin: 10px;
+    transition-duration: 0.5s;
+}
+main .expanded{
+    padding: 5px 57px 30px 57px;
+    height: fit-content;
+    /* border: 1px solid black; */
+    font-size: 18px;
+    display: none;
+    line-height: 28px;
+}
+main .expanded span{
+    color: blue;
+}
+main .family{
+    display: flex;
+    padding: 60px 20px;
+    height: fit-content;
+    /* border: 1px solid black; */
+    justify-content: center;
+    align-items: center;
+}
+main .family #image1,#image2{
+    /* border: 1px solid black; */
+    padding: 0px 30px;
+    text-align: center;
+}
+main .family #image2 img{
+    margin: 20px 0px;
+    transition-duration: 0.5s;
+}
+main .family #image1{
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    width: 3900px;
+    overflow: hidden;
+}
+main .family #image1 #photo1,#photo2,#photo3{
+    animation: upDownSlider 20s linear infinite;
+    text-align: center;
+}
+main .family #text{
+    /* border: 1px solid black; */
+    padding: 0px 40px;
+    font-size: 18px;
+    line-height: 30px;
+}
+main .family #text big{
+    font-size: 45px;
+}
+main .friends{
+    display: flex;
+    padding: 60px 20px;
+    height: fit-content;
+    /* border: 1px solid black; */
+    justify-content: center;
+    align-items: center;
+}
+main .friends #image{
+    /* border: 1px solid black; */
+    width: 1200px;
+    padding: 0px 30px;
+}
+main .friends #image #img2{
+    float: right;
+}
+main .friends #image img{
+    transition-duration: 0.5s;
+}
+main .friends #text{
+    /* border: 1px solid black; */
+    padding: 0px 40px;
+    font-size: 18px;
+    line-height: 30px;
+}
+main .socialWorks{
+    display: flex;
+    flex-direction: column;
+    padding: 60px 20px;
+    height: fit-content;
+    /* border: 1px solid black; */
+    justify-content: center;
+    align-items: center;
+}
+main .socialWorks #image{
+    height: fit-content;
+    width: 90vw;
+    padding: 0px 20px;
+}
+main .socialWorks #image img{
+    height: 300px;
+    width: 100%;
+    box-shadow: 6px 6px 10px black;
+    filter: opacity(0.8);
+}
+main .socialWorks #text{
+    /* border: 1px solid black; */
+    padding: 0px 40px;
+    font-size: 18px;
+    margin: 30px 0px;
+}
+main .socialWorks #text a{
+    color: blue;
+}
+main .socialWorks .socialimages img{
+    margin: 10px 50px;
+}
+/* footer part styles */
+.contact{
+    height: fit-content;
+    box-shadow: -6px 0px 10px black;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    justify-content: space-evenly;
+    padding: 30px;
+}
+#contactinfo,#map,#copyright{
+    padding: 20px;
+}
+#contactinfo #heading{
+    font-size: 30px;
+    margin: 0px 0px 25px 0px;
+    font-weight: 600;
+}
+#contactinfo #con1,#con2{
+    margin: 0px 0px 20px 0px;
+}
+.contact #contactinfo #head1,#head2,#head3{
+    color: white;
+    text-shadow: 1px 1px 4px black;
+}
+#copyright{
+    grid-column: 1/3;
+    text-align: center;
+}
+#copyright #links img{
+    margin: 20px 35px;
+    transition-duration: 0.2s;
+    box-shadow: none;
+}
+
+
+
+
+
+/* WRITE HOVAR PROPERTIES HERE. */
+header .menu ul #item1:hover,a #sub1:hover,#sub2:hover,#sub3:hover,#sub4:hover,#sub5:hover,#sub6:hover{
+    background: rgb(60, 175, 221);
+    color: white;
+    text-shadow: 1px 1px 2px black;
+    font-weight: 600;
+    cursor: pointer;
+}
+.contact #copyright #links img:hover{
+    cursor: pointer;
+    transform: translateY(-4px);
+    box-shadow: 1px 1px 2px black;
+}
+main .content #text span:hover{
+    cursor: pointer;
+}
+main .expanded span:hover{
+    cursor: pointer;
+}
+main .content #image img:hover{
+    transform-origin: center;
+    transform: rotate(7deg);
+}
+main .family #image2 img:hover{
+    transform-origin: center;
+    transform: rotate(7deg);
+}
+main .friends #image img:hover{
+    transform-origin: center;
+    transform: rotate(7deg);
+}
+main .socialWorks #text a:hover{
+    text-decoration: blue underline;
+}
+/* Animation properties here */
+
+/* @keyframes imageChanger{
+    0%{
+        background-image: url("/image/TagoreSketch.jpg");
+    }
+    6%{
+        background-image: url("/image/durgaCraft.jpg");
+    }
+    26%{
+        background-image: url("/image/durgaCraft.jpg");
+    }
+    32%{
+        background-image: url("/image/FruitsCraft.jpg");
+    }
+    52%{
+        background-image: url("/image/FruitsCraft.jpg");
+    }
+    58%{
+        background-image: url("/image/shipCraft.jpg");
+    }
+    78%{
+        background-image: url("/image/shipCraft.jpg");
+    }
+    84%{
+        background-image: url("/image/TagoreSketch.jpg");
+    }
+    100%{
+        background-image: url("/image/TagoreSketch.jpg");
+    }
+} */
+
+@keyframes upDownSlider{
+    0%{
+        transform: translateY(0px);
+    }
+    45%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(-305px);
+    }
+    95%{
+        transform: translateY(-305px);
+    }
+    100%{
+        transform: translateY(-610px);
+    }
+}
+
+
+
+@media (max-width:1360px){
+    header .hamburger{
+        width: calc(100vw - 40px);
+    }
+    header .sticky{
+        width: 100%;
+    }
+    main .family{
+        display: flex;
+        padding: 60px 10px;
+        flex-wrap: wrap;
+    }
+    main .family #image1,#image2{
+        /* border: 1px solid black; */
+        padding: 0px 30px;
+        text-align: center;
+    }
+    main .family #image1 img,#image2 img{
+        overflow: hidden;
+    }
+    main .family #image2 img{
+        margin: 20px 0px;
+        transition-duration: 0.5s;
+    }
+    main .family #image1 #photo1,#photo2,#photo3{
+        animation: upDownSlider 20s linear infinite;
+        text-align: center;
+    }
+    main .family #text{
+        /* border: 1px solid black; */
+        padding: 0px 40px;
+        font-size: 18px;
+        line-height: 30px;
+    }
+    main .family #text big{
+        font-size: 45px;
+    }
+}
+
+
+
+@media (max-width:1000px){
+    main .content{
+        flex-direction: column-reverse;
+    }
+    main .content #text{
+        font-size: 15px;
+    }
+    main .content #text big{
+        font-size: 40px;
+    }
+    main .content #text b{
+        font-size: 20px;
+    }
+    main .content #text span b{
+        font-size: 15px;
+    }
+    main .expanded{
+        font-size: 15px;
+    }
+    main .expanded span{
+        color: blue;
+    }
+    main .family #text{    
+        font-size: 15px;
+    }
+    main .friends{
+        flex-direction: column-reverse;
+    }
+    main .friends #image #img2{
+        float: none;
+    }
+    main .friends #image{
+        margin: auto;
+        margin-top: 40px;
+    }
+    main .friends #text{
+        font-size: 15px;
+    }
+    main .socialWorks #text{
+        font-size: 15px;
+        line-height: 25px;
+    }
+}
+
+
+
+@media (max-width:800px){
+    .contact{
+        padding: 20px;
+    }
+    #contactinfo,#map,#copyright{
+        padding: 0px;
+        margin: auto;
+    }
+    #contactinfo #heading{
+        font-size: 20px;
+        margin: 0px 0px 25px 0px;
+        font-weight: 600;
+    }
+    #contactinfo #con1,#con2{
+        margin: 0px 0px 20px 0px;
+    }
+    .contact #contactinfo #head1,#head2,#head3{
+        font-size: 15px;
+        color: white;
+        text-shadow: 1px 1px 4px black;
+    }
+    .contact #map img{
+        height: 180px;
+        margin: auto;
+    }
+    #copyright #links img{
+        margin: 20px 20px;
+        transition-duration: 0.2s;
+        height: 30px;
+    }
+    .contact{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    #contactinfo #heading{
+        font-size: 20px;
+    }
+}
+
+
+@media(max-width:600px){
+    header .menu #items #subAcademic_phone,#subDownloads_phone,#subProjects_phone{
+        display: none;
+        margin: 0px 4px;
+        font-size: 12px;
+    }
+    header .menu #items #subAcademic_phone li,#subDownloads_phone li ,#subProjects_phone li{
+        padding: 15px 20px;
+        margin: 2px 10px;
+        border: 2px solid black;
+    }
+    header .menu #items{
+        height: fit-content;
+        background-image: linear-gradient(rgb(240, 240, 131),rgb(252, 199, 199));
+        border: 0.5px solid black;
+        width: 350px;
+        position: absolute;
+        z-index: 5;
+        display: inline-block;
+        font-size: 15px;
+        box-shadow: 2px 2px 10px black;
+        width: 99.6%;
+    }
+    header .menu{
+        transform: translateX(-450px);
+        transition-timing-function: linear;
+        transition-duration: 0.2s;
+        position: fixed;
+        top: 78px;
+        left: 0;
+        width: 100%;
+        z-index: 10;
+    }
+    header .stickyMenu{
+        top: 54px;
+    }
+}
+
+@media (max-width:550px){
+    header .hamburger #heading{
+        font-size: 20px;
+    }
+    main .content #image img{
+        height: 100px;
+    }
+    main .content #text{
+        font-size: 12px;
+        padding: 4px;
+    }
+    main .content #text b{
+        font-size: 12px;
+    }
+    main .content #text span b{
+        font-size: 12px;
+    }
+    main .expanded{
+        font-size: 12px;
+        padding: 0px 20px;
+    }
+    main .family{
+        display: flex;
+        padding: 60px 5px;
+        flex-wrap: wrap;
+    }
+    main .family #image1{
+        height: 220px;
+        margin-bottom: 40px;
+    }
+    main .family #image1 img{
+        width: 220px;
+        height: 220px;
+    }
+    main .family #image2 img{
+        margin: 20px 0px;
+        transition-duration: 0.5s;
+        height: 150px;
+    }
+    main .family #image1 #photo1,#photo2,#photo3{
+        animation: upDownSlider_1 15s linear infinite;
+        text-align: center;
+    }
+    main .family #text{
+        font-size: 12px;
+    }
+    main .family #text big{
+        font-size: 40px;
+    }
+    main .family #text{    
+        font-size: 12px;
+    }
+    main .friends #image{
+        padding: 5px;
+    }
+    main .friends #image img{
+        height: 90px;
+    }
+    main .friends #text{
+        font-size: 12px;
+        padding: 5px;
+    }
+    main .socialWorks #text{
+        font-size: 12px;
+        line-height: 25px;
+        padding: 5px;
+    }
+    main .socialWorks .socialimages{
+        margin: 0px;
+    }
+    main .socialWorks .socialimages img{
+        height: 160px;
+    }
+    #contactinfo #heading{
+        font-size: 15px;
+    }
+    #contactinfo #con1,#con2,#con3{
+        font-size: 12px;
+    }
+    .contact #contactinfo #head1,#head2,#head3{
+        font-size: 15px;
+    }
+    #contactinfo #heading{
+        font-size: 20px;
+    }
+
+    /* @media(max-width:400px){
+        header .menu #items #subAcademic_phone,#subDownloads_phone,#subProjects_phone{
+            display: none;
+            margin: 0px 4px;
+            font-size: 12px;
+        }
+        header .menu #items #subAcademic_phone li,#subDownloads_phone li ,#subProjects_phone li{
+            padding: 15px 20px;
+            margin: 2px 10px;
+            border: 2px solid black;
+        }
+        header .menu #items{
+            height: fit-content;
+            background-image: linear-gradient(rgb(240, 240, 131),rgb(252, 199, 199));
+            border: 0.5px solid black;
+            width: 350px;
+            position: absolute;
+            z-index: 5;
+            display: inline-block;
+            font-size: 15px;
+            box-shadow: 2px 2px 10px black;
+        }
+        header .menu{
+            transform: translateX(-450px);
+            transition-timing-function: linear;
+            transition-duration: 0.2s;
+            position: fixed;
+            top: 78px;
+            left: 0;
+            width: 100%;
+            z-index: 10;
+        }
+        header .stickyMenu{
+            top: 54px;
+        }
+    } */
+
+
+    @keyframes upDownSlider_1{
+        0%{
+            transform: translateY(0px);
+        }
+        45%{
+            transform: translateY(0px);
+        }
+        50%{
+            transform: translateY(-225px);
+        }
+        95%{
+            transform: translateY(-225px);
+        }
+        100%{
+            transform: translateY(-440px);
+        }
+    }
+}
+@media(max-width:450px){
+    header .menu #items{
+        height: fit-content;
+        background-image: linear-gradient(rgb(240, 240, 131),rgb(252, 199, 199));
+        border: 0.5px solid black;
+        width: 350px;
+        position: absolute;
+        z-index: 5;
+        display: inline-block;
+        font-size: 15px;
+        box-shadow: 2px 2px 10px black;
+        width: 100%;
+    }
+}

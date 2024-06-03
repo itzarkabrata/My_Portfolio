@@ -1,0 +1,780 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&family=Roboto+Slab&display=swap');
+*{
+    margin: 0;padding: 0;
+}
+body{
+    font-family: 'Oswald', sans-serif;
+    background-image: repeating-linear-gradient(rgb(86, 175, 216),rgba(84, 84, 243, 0.808),rgb(240, 240, 131));
+}
+html{
+    scroll-behavior: smooth;
+}
+body img{
+    box-shadow: 3px 3px 8px black;
+}
+body a{
+    text-decoration: none;
+    color: black;
+}
+/* navigation bar properties here */
+
+header .hamburger{
+    height: 60px;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    transition-duration: 0.4s;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+}
+header .sticky{
+    /* background-color: rgba(8, 8, 143, 0.808); */
+    background-color: black;
+    box-shadow: 2px 2px 10px black;
+    height: 40px;
+    padding: 7px;
+}
+header .hamburger #h_icon{
+    margin: 0px 10px;
+    z-index: 10;
+    padding: 3px 0px 0px 0px;
+    filter: brightness(1.5);
+}
+header .hamburger #h_icon img{
+    box-shadow: none;
+}
+header .hamburger #heading{
+    font-size: 25px;
+    font-weight: 600;
+    color: white;
+    text-shadow: 2px 2px 6px black;
+    margin: 0px 40px;
+}
+header .hamburger #heading span{
+    color: rgb(250, 182, 93);
+}
+
+/* hamburger Properties here */
+
+header .menu li{
+    list-style: none;
+}
+header .menu #item1 p,#item2 p,#item3 p,#item4 p{
+    padding: 15px;
+    border: 1px solid black;
+    z-index: 10;
+}
+header .menu #sub1,#sub2,#sub3,#sub4,#sub5,#sub6{
+    padding: 15px;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-image: linear-gradient(rgb(240, 240, 131),rgb(252, 199, 199));
+}
+header .menu #subAcademic,#subDownloads,#subProjects{
+    display: inline-block;
+    position: absolute;
+    width: 150px;
+    visibility: hidden;
+    z-index: 5;
+    filter: opacity(0);
+    transition-duration: 0.3s;
+}
+header .menu #items #subAcademic_phone,#subDownloads_phone,#subProjects_phone{
+    display: none;
+    padding: 10px;
+    font-size: 15px;
+}
+header .menu #subAcademic{
+    top: 59px;
+    left: 352px;
+}
+header .menu #subDownloads{
+    top: 117px;
+    left: 352px
+}
+header .menu #subProjects{
+    top: 175px;
+    left: 352px
+}
+header .menu #items{
+    height: fit-content;
+    background-image: linear-gradient(rgb(240, 240, 131),rgb(252, 199, 199));
+    border: 0.5px solid black;
+    width: 350px;
+    position: absolute;
+    display: inline-block;
+    font-size: 18px;
+    z-index: 5;
+    box-shadow: 2px 2px 10px black;
+}
+header .menu{
+    height: fit-content;
+    transform: translateX(-450px);
+    transition-timing-function: linear;
+    transition-duration: 0.2s;
+    position: fixed;
+    top: 78px;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    filter: opacity(0);
+}
+header .stickyMenu{
+    top: 54px;
+}
+
+/* Slider properties here */
+main .imageSlider{
+    display: flex;
+    overflow: hidden;
+    /* border: 2px solid black; */
+    width: 1000px;
+    margin: auto;
+    margin-top: 70px; 
+    align-items: center;
+    height: fit-content;
+}
+main .imageSlider #image1,#image2,#image3,#image4,#image5{
+    margin: 30px 0px;
+    animation: SlideImages 20s linear infinite;
+    z-index: -1;
+}
+
+/* About College properties */
+main .AboutCollege{
+    /* border: 2px solid black; */
+    height: fit-content;
+    text-align: center;
+    padding: 50px 50px;
+}
+main .AboutCollege #p1{
+    font-size: 40px;
+    margin: 0px 0px 10px 0px;
+    color: rgb(219, 161, 2);
+    text-shadow: 4px 4px 8px black;
+    font-weight: 600;
+}
+main .AboutCollege #p2{
+    color: white;
+    text-shadow: 2px 2px 6px black;
+    margin: 20px 0px 0px 0px;
+    font-size: 20px;
+}
+main .AboutCollege #p3{
+    margin: 20px 0px 0px 0px;
+    font-size: 20px;
+}
+
+/* College event properties here */
+
+
+main .events{
+    /* border: 1px solid black; */
+    display: grid;
+    grid-template-columns: auto;
+    text-align: center;
+    padding: 60px 80px;
+    grid-row-gap: 80px;
+}
+main .events #heading{
+    /* border: 1px solid black; */
+    padding: 20px 0px;
+    font-size: 35px;
+    font-weight: 600;
+    color: white;
+    text-shadow: 2px 2px 6px black;
+    text-decoration: white underline;
+}
+main .events #skywatching,#excursion,#social,#games,#puja{
+    padding: 30px 0px;
+    border: 1px solid black;
+    height: fit-content;
+    border: 1px solid rgb(201, 198, 19);
+    transition-duration: 0.1s;
+}
+main .events #skywatching div,#excursion div,#social div,#games div,#puja div{
+    /* border: 1px solid black;  */
+    display: none;
+    margin: 30px;
+}
+main .events #skywatching #photo img,#excursion #photo img,#social #photo img,#games #photo img,#puja #photo img{
+    margin: 30px;
+    transition-duration: 0.3s;
+}
+main .events #skywatching #heading1,#excursion #heading2,#social #heading3,#games #heading4,#puja #heading5{
+    font-size: 30px;
+    color: rgb(201, 198, 19);
+    text-shadow: 1.5px 1.5px 3px black;
+}
+main .events #skywatching p,#excursion p,#social p,#games p,#puja p{
+    font-size: 18px;
+}
+
+/* Footer properties here */
+
+.contact{
+    height: fit-content;
+    box-shadow: 6px 6px 10px black;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    justify-content: space-evenly;
+    padding: 30px;
+}
+#contactinfo,#map,#copyright{
+    padding: 20px;
+}
+#contactinfo #heading{
+    font-size: 30px;
+    margin: 0px 0px 25px 0px;
+    font-weight: 600;
+}
+#contactinfo #con1,#con2{
+    margin: 0px 0px 20px 0px;
+}
+.contact #contactinfo #head1,#head2,#head3{
+    color: white;
+    text-shadow: 1px 1px 4px black;
+}
+#copyright{
+    grid-column: 1/3;
+    text-align: center;
+}
+#copyright #links img{
+    margin: 20px 35px;
+    transition-duration: 0.2s;
+    box-shadow: none;
+}
+
+
+
+/* Hover properties here */
+main .events #skywatching:hover,#excursion:hover,#social:hover,#games:hover,#puja:hover{
+    cursor: pointer;
+    box-shadow: 4px 4px 10px black;
+    border: 3px solid rgb(201, 198, 19);
+}
+
+main .events #skywatching #photo img:hover,#excursion #photo img:hover,#social #photo img:hover,#games #photo img:hover,#puja #photo img:hover{
+    cursor: pointer;
+    height: 300px;
+}
+.contact #copyright #links img:hover{
+    cursor: pointer;
+    transform: translateY(-4px);
+    box-shadow: 1px 1px 2px black;
+}
+header .menu ul #item1:hover,a #sub1:hover,#sub2:hover,#sub3:hover,#sub4:hover,#sub5:hover,#sub6:hover{
+    background: rgb(47, 166, 212);
+    color: white;
+    text-shadow: 1px 1px 2px black;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+
+
+
+/* Animation Properties here */
+@keyframes SlideImages{
+    0%{
+        transform: translateX(0px);
+    }
+    10%{
+        transform: translateX(-1000px);
+    }
+    35%{
+        transform: translateX(-1000px);
+    }
+    45%{
+        transform: translateX(-2000px);
+    }
+    70%{
+        transform: translateX(-2000px);
+    }
+    80%{
+        transform: translateX(-3000px);
+    }
+    100%{
+        transform: translateX(-3000px);
+    }
+    
+}
+/* Media properties here */
+
+
+
+
+
+@media (max-width:800px){
+    .contact{
+        padding: 20px;
+    }
+    #contactinfo,#map,#copyright{
+        padding: 0px;
+        margin: auto;
+    }
+    #contactinfo #heading{
+        font-size: 20px;
+        margin: 0px 0px 25px 0px;
+        font-weight: 600;
+    }
+    #contactinfo #con1,#con2{
+        margin: 0px 0px 20px 0px;
+    }
+    .contact #contactinfo #head1,#head2,#head3{
+        font-size: 15px;
+        color: white;
+        text-shadow: 1px 1px 4px black;
+    }
+    .contact #map img{
+        height: 180px;
+        margin: auto;
+    }
+    #copyright #links img{
+        margin: 20px 20px;
+        transition-duration: 0.2s;
+        height: 30px;
+    }
+    .contact{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    #contactinfo #heading{
+        font-size: 20px;
+    }
+}
+
+
+@media(max-width:600px){
+    header .menu #items #subAcademic_phone,#subDownloads_phone,#subProjects_phone{
+        display: none;
+        margin: 0px 4px;
+        font-size: 12px;
+    }
+    header .menu #items #subAcademic_phone li,#subDownloads_phone li ,#subProjects_phone li{
+        padding: 15px 20px;
+        margin: 2px 10px;
+        border: 2px solid black;
+    }
+    header .menu #items{
+        height: fit-content;
+        background-image: linear-gradient(rgb(240, 240, 131),rgb(252, 199, 199));
+        border: 0.5px solid black;
+        width: 350px;
+        position: absolute;
+        z-index: 5;
+        display: inline-block;
+        font-size: 15px;
+        box-shadow: 2px 2px 10px black;
+    }
+    header .menu{
+        transform: translateX(-450px);
+        transition-timing-function: linear;
+        transition-duration: 0.2s;
+        position: fixed;
+        top: 78px;
+        left: 0;
+        width: 100%;
+        z-index: 10;
+    }
+    header .stickyMenu{
+        top: 54px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media(max-width:1100px){
+    main .events #skywatching #photo img,#excursion #photo img,#social #photo img,#games #photo img,#puja #photo img{
+        height: 180px;
+    }
+    main .events #skywatching #photo img:hover,#excursion #photo img:hover,#social #photo img:hover,#games #photo img:hover,#puja #photo img:hover{
+        cursor: pointer;
+        height: 230px;
+    }
+}
+@media(max-width:1012px){
+    main .events #skywatching #photo img,#excursion #photo img,#social #photo img,#games #photo img,#puja #photo img{
+        height: 160px;
+    }
+    main .events #skywatching #photo img:hover,#excursion #photo img:hover,#social #photo img:hover,#games #photo img:hover,#puja #photo img:hover{
+        cursor: pointer;
+        height: 200px;
+    }
+}
+
+@media(max-width:900px){
+    main .imageSlider img{
+        width: 800px;
+    }
+    main .imageSlider{
+        display: flex;
+        overflow: hidden;
+        /* border: 2px solid black; */
+        width: 800px;
+        margin: auto; 
+        margin-top: 70px; 
+        align-items: center;
+        height: fit-content;
+    }
+    main .imageSlider #image1,#image2,#image3,#image4,#image5{
+        margin: 30px 0px;
+        animation: SlideImages_new 20s linear infinite;
+        z-index: -1;
+    }
+    main .AboutCollege #p1{
+        font-size: 30px;
+    }
+    main .AboutCollege #p2{
+        font-size: 18px;
+    }
+    main .AboutCollege #p3{
+        font-size: 18px;
+    }
+    main .events #heading{
+        font-size: 30px;
+    }
+    main .events #skywatching #heading1,#excursion #heading2,#social #heading3,#games #heading4,#puja #heading5{
+        font-size: 24px;
+    }
+    main .events #skywatching p,#excursion p,#social p,#games p,#puja p{
+        font-size: 16px;
+    }
+    @keyframes SlideImages_new{
+        0%{
+            transform: translateX(0px);
+        }
+        10%{
+            transform: translateX(-800px);
+        }
+        35%{
+            transform: translateX(-800px);
+        }
+        45%{
+            transform: translateX(-1600px);
+        }
+        70%{
+            transform: translateX(-1600px);
+        }
+        80%{
+            transform: translateX(-2400px);
+        }
+        100%{
+            transform: translateX(-2400px);
+        }
+        
+    }
+}
+@media(max-width:820px){
+    main .events #excursion #photo img,#social #photo img,#games #photo img,#puja #photo img{
+        height: 130px;
+    }
+    main .events #excursion #photo img:hover,#social #photo img:hover,#games #photo img:hover,#puja #photo img:hover{
+        cursor: pointer;
+        height: 160px;
+    }
+}
+@media(max-width:750px){
+    main .events #skywatching #photo img{
+        height: 140px;
+    }
+    main .events #skywatching #photo img:hover{
+        cursor: pointer;
+        height: 180px;
+    }
+    main .imageSlider img{
+        width: 650px;
+    }
+    main .imageSlider{
+        width: 650px;
+    }
+    main .imageSlider #image1,#image2,#image3,#image4,#image5{
+        margin: 30px 0px;
+        animation: SlideImages_new 20s linear infinite;
+        z-index: -1;
+    }
+    
+    @keyframes SlideImages_new{
+        0%{
+            transform: translateX(0px);
+        }
+        10%{
+            transform: translateX(-650px);
+        }
+        35%{
+            transform: translateX(-650px);
+        }
+        45%{
+            transform: translateX(-1300px);
+        }
+        70%{
+            transform: translateX(-1300px);
+        }
+        80%{
+            transform: translateX(-1950px);
+        }
+        100%{
+            transform: translateX(-1950px);
+        }
+    }
+}
+
+@media(max-width:700px){
+    main .events #skywatching #photo img:hover,#excursion #photo img:hover,#social #photo img:hover,#games #photo img:hover,#puja #photo img:hover{
+        cursor: pointer;
+        height: 130px;
+    }
+}
+@media (max-width:800px){
+    .contact{
+        padding: 20px;
+    }
+    #contactinfo,#map,#copyright{
+        padding: 0px;
+        margin: auto;
+    }
+    #contactinfo #heading{
+        font-size: 20px;
+        margin: 0px 0px 25px 0px;
+        font-weight: 600;
+    }
+    #contactinfo #con1,#con2{
+        margin: 0px 0px 20px 0px;
+    }
+    .contact #contactinfo #head1,#head2,#head3{
+        font-size: 15px;
+        color: white;
+        text-shadow: 1px 1px 4px black;
+    }
+    .contact #map img{
+        height: 180px;
+        margin: auto;
+    }
+    #copyright #links img{
+        margin: 20px 20px;
+        transition-duration: 0.2s;
+        height: 30px;
+    }
+    .contact{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    #contactinfo #heading{
+        font-size: 20px;
+    }
+}
+
+@media(max-width:600px){
+    header .menu #items #subAcademic_phone,#subDownloads_phone,#subProjects_phone{
+        display: none;
+        margin: 0px 4px;
+        font-size: 12px;
+    }
+    header .menu #items #subAcademic_phone li,#subDownloads_phone li ,#subProjects_phone li{
+        padding: 15px 20px;
+        margin: 2px 10px;
+        border: 2px solid black;
+    }
+    header .menu #items{
+        height: fit-content;
+        background-image: linear-gradient(rgb(240, 240, 131),rgb(252, 199, 199));
+        border: 0.5px solid black;
+        width: 350px;
+        position: absolute;
+        z-index: 5;
+        display: inline-block;
+        font-size: 15px;
+        box-shadow: 2px 2px 10px black;
+        width: 99.6%;
+    }
+    header .menu{
+        transform: translateX(-450px);
+        transition-timing-function: linear;
+        transition-duration: 0.2s;
+        position: fixed;
+        top: 78px;
+        left: 0;
+        width: 99.6%;
+        z-index: 10;
+    }
+    header .stickyMenu{
+        top: 54px;
+    }
+}
+
+@media(max-width:550px){
+    main .events{
+        /* border: 1px solid black; */
+        display: grid;
+        grid-template-columns: auto;
+        text-align: center;
+        padding: 60px 40px;
+        grid-row-gap: 80px;
+    }
+    main .AboutCollege #p1{
+        font-size: 25px;
+    }
+    main .AboutCollege #p2{
+        font-size: 16px;
+    }
+    main .AboutCollege #p3{
+        font-size: 15px;
+    }
+    header .hamburger #heading{
+        font-size: 20px;
+    }
+    main .imageSlider img{
+        width: 400px;
+        height: 300px;
+    }
+    main .imageSlider{
+        width: 400px;
+    }
+    main .imageSlider #image1,#image2,#image3,#image4,#image5{
+        margin: 30px 0px;
+        animation: SlideImages_new 20s linear infinite;
+        z-index: -1;
+    }
+    @keyframes SlideImages_new{
+        0%{
+            transform: translateX(0px);
+        }
+        10%{
+            transform: translateX(-400px);
+        }
+        35%{
+            transform: translateX(-400px);
+        }
+        45%{
+            transform: translateX(-800px);
+        }
+        70%{
+            transform: translateX(-800px);
+        }
+        80%{
+            transform: translateX(-1200px);
+        }
+        100%{
+            transform: translateX(-1200px);
+        }
+    }
+}
+
+
+@media(max-width:400px){
+    main .imageSlider img{
+        width: 320px;
+        height: 200px;
+    }
+    main .imageSlider{
+        width: 320px;
+    }
+    main .imageSlider #image1,#image2,#image3,#image4,#image5{
+        margin: 30px 0px;
+        animation: SlideImages_new 20s linear infinite;
+        z-index: -1;
+    }
+
+    main .events #heading{
+        font-size: 25px;
+    }
+    main .events #skywatching #heading1,#excursion #heading2,#social #heading3,#games #heading4,#puja #heading5{
+        font-size: 20px;
+    }
+    main .events #skywatching p,#excursion p,#social p,#games p,#puja p{
+        font-size: 15px;
+    }
+    @keyframes SlideImages_new{
+        0%{
+            transform: translateX(0px);
+        }
+        10%{
+            transform: translateX(-320px);
+        }
+        35%{
+            transform: translateX(-320px);
+        }
+        45%{
+            transform: translateX(-640px);
+        }
+        70%{
+            transform: translateX(-640px);
+        }
+        80%{
+            transform: translateX(-960px);
+        }
+        100%{
+            transform: translateX(-960px);
+        }
+    }
+}
+
+
+@media(max-width:300px){
+    header .hamburger #heading{
+        font-size: 15px;
+    }
+    main .imageSlider img{
+        width: 270px;
+        height: 180px;
+    }
+    main .imageSlider{
+        width: 270px;
+    }
+    main .imageSlider #image1,#image2,#image3,#image4,#image5{
+        margin: 30px 0px;
+        animation: SlideImages_new 20s linear infinite;
+        z-index: -1;
+    }
+    main .AboutCollege #p1{
+        font-size: 20px;
+    }
+    main .events #skywatching #photo img,#excursion #photo img,#social #photo img,#games #photo img,#puja #photo img{
+        margin: 15px;
+    }
+    main .events{
+        /* border: 1px solid black; */
+        padding: 60px 10px;
+    }
+    @keyframes SlideImages_new{
+        0%{
+            transform: translateX(0px);
+        }
+        10%{
+            transform: translateX(-270px);
+        }
+        35%{
+            transform: translateX(-270px);
+        }
+        45%{
+            transform: translateX(-540px);
+        }
+        70%{
+            transform: translateX(-540px);
+        }
+        80%{
+            transform: translateX(-810px);
+        }
+        100%{
+            transform: translateX(-810px);
+        }
+    }
+}

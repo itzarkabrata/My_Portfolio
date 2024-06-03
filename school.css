@@ -1,0 +1,941 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&family=Roboto+Slab&display=swap');
+*{
+    margin: 0;padding: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Oswald', sans-serif;
+    background-image: repeating-linear-gradient(rgb(86, 175, 216),rgba(84, 84, 243, 0.808),rgb(240, 240, 131));
+}
+body img{
+    box-shadow: 3px 3px 8px black;
+}
+body a{
+    text-decoration: none;
+    color: black;
+}
+
+/* navigation bar properties here */
+header .hamburger{
+    height: 60px;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    transition-duration: 0.4s;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+}
+header .sticky{
+    /* background-color: rgba(8, 8, 143, 0.808); */
+    background-color: black;
+    box-shadow: 2px 2px 10px black;
+    height: 40px;
+    padding: 7px;
+}
+header .hamburger #h_icon{
+    margin: 0px 10px;
+    z-index: 10;
+    padding: 3px 0px 0px 0px;
+    filter: brightness(1.5);
+}
+header .hamburger #h_icon img{
+    box-shadow: none;
+}
+header .hamburger #heading{
+    font-size: 25px;
+    font-weight: 600;
+    color: white;
+    text-shadow: 2px 2px 6px black;
+    margin: 0px 40px;
+}
+header .hamburger #heading span{
+    color: rgb(250, 182, 93);
+}
+
+
+
+/* hamburger Properties here */
+
+header .menu li{
+    list-style: none;
+}
+header .menu #item1 p,#item2 p,#item3 p,#item4 p{
+    padding: 15px;
+    border: 1px solid black;
+    z-index: 10;
+}
+header .menu #sub1,#sub2,#sub3,#sub4,#sub5,#sub6{
+    padding: 15px;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-image: linear-gradient(rgb(240, 240, 131),rgb(252, 199, 199));
+}
+header .menu #subAcademic,#subDownloads,#subProjects{
+    display: inline-block;
+    position: absolute;
+    width: 150px;
+    visibility: hidden;
+    z-index: 5;
+    filter: opacity(0);
+    transition-duration: 0.3s;
+}
+header .menu #items #subAcademic_phone,#subDownloads_phone,#subProjects_phone{
+    display: none;
+    padding: 10px;
+    font-size: 15px;
+}
+header .menu #subAcademic{
+    top: 59px;
+    left: 352px;
+}
+header .menu #subDownloads{
+    top: 117px;
+    left: 352px
+}
+header .menu #subProjects{
+    top: 175px;
+    left: 352px
+}
+header .menu #items{
+    height: fit-content;
+    background-image: linear-gradient(rgb(240, 240, 131),rgb(252, 199, 199));
+    border: 0.5px solid black;
+    width: 350px;
+    position: absolute;
+    display: inline-block;
+    font-size: 18px;
+    z-index: 5;
+    box-shadow: 2px 2px 10px black;
+}
+header .menu{
+    height: fit-content;
+    transform: translateX(-435px);
+    transition-timing-function: linear;
+    transition-duration: 0.2s;
+    position: fixed;
+    top: 78px;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    filter: opacity(0);
+}
+header .stickyMenu{
+    top: 54px;
+}
+
+
+
+/* Slider properties here */
+main .imageSlider{
+    display: flex;
+    overflow: hidden;
+    /* border: 2px solid black; */
+    width: 1000px;
+    margin: auto; 
+    margin-top: 70px; 
+    align-items: center;
+    height: fit-content;
+}
+main .imageSlider #image1,#image2,#image3,#image4,#image5{
+    margin: 30px 0px;
+    animation: SlideImages 20s linear infinite;
+    z-index: -1;
+}
+
+/* About School properties */
+main .AboutSchool{
+    /* border: 2px solid black; */
+    height: fit-content;
+    text-align: center;
+    padding: 40px 50px;
+}
+main .AboutSchool #p1{
+    font-size: 40px;
+    margin: 0px 0px 10px 0px;
+    color: rgb(219, 161, 2);
+    text-shadow: 4px 4px 8px black;
+    font-weight: 600;
+}
+main .AboutSchool #p2{
+    color: white;
+    text-shadow: 2px 2px 6px black;
+    margin: 20px 0px 0px 0px;
+    font-size: 20px;
+}
+main .AboutSchool #p3{
+    margin: 20px 0px 0px 0px;
+    font-size: 20px;
+}
+
+/* ABout My Qualification */
+main .qualification{
+    display: grid;
+    text-align: center;
+    /* border: 1px solid black; */
+    height: fit-content;
+    padding: 40px 50px;
+}
+main .qualification #item{
+    display: grid;
+    grid-template-columns: auto auto;
+    /* border: 1px solid black; */
+    height: fit-content;
+    text-align: center;
+}
+main .qualification #heading{
+    /* border: 1px solid black; */
+    height: fit-content;
+    padding: 10px 0px 25px 0px;
+    font-size: 35px;
+    color: white;
+    text-shadow: 3px 3px 8px black;
+    text-decoration: white underline;
+}
+main .qualification #item #subhead1,#subhead2,#madhyamik,#higherSecondary{
+    border: 2px solid black;
+    height: fit-content;
+}
+main .qualification #item #madhyamik,#higherSecondary{
+    line-height: 30px;
+    font-size: 17px;
+    padding: 20px;
+}
+main .qualification #item #madhyamik img,#higherSecondary img{
+    margin: 10px;
+    box-shadow: none;
+}
+main .qualification #item #subhead1,#subhead2{
+    font-size: 25px;
+    color: rgb(36, 22, 87);
+    text-shadow: 2px 2px 6px white;
+    font-weight: 600;
+    padding: 10px 0px;
+}
+main .qualification #item #subhead1 p,#subhead2 p{
+    font-size: 17px;
+    font-weight: normal;
+    text-shadow: none;
+}
+
+/* Achievement properties */
+main .achievement{
+    height: fit-content;
+    /* border: 1px solid black; */
+    height: fit-content;
+    padding: 40px 50px;
+}
+main .achievement #heading{
+    /* border: 1px solid black; */
+    height: fit-content;
+    padding: 10px 0px 25px 0px;
+    font-size: 35px;
+    color: white;
+    text-shadow: 3px 3px 8px black;
+    text-decoration: white underline;
+    text-align: center;
+}
+main .achievement #items{
+    display: flex;
+    /* border: 1px solid black; */
+    height: fit-content;
+}
+main .achievement #items div,#award{
+    padding:30px;
+    /* border: 1px solid black; */
+    font-size: 17px;
+}
+main .achievement #items div{
+    width: 300px;
+}
+main .achievement #items div #img1{
+    transition-duration: 0.4s;
+}
+main .achievement #items div #img2{
+    float: right;
+    transition-duration: 0.2s;
+}
+main .achievement #items ul li{
+    line-height: 50px;
+    padding: 50px 0px;
+}
+
+
+
+
+
+/* Footer properties here */
+
+.contact{
+    height: fit-content;
+    box-shadow: 6px 6px 10px black;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    justify-content: space-evenly;
+    padding: 30px;
+}
+#contactinfo,#map,#copyright{
+    padding: 20px;
+}
+#contactinfo #heading{
+    font-size: 30px;
+    margin: 0px 0px 25px 0px;
+    font-weight: 600;
+}
+#contactinfo #con1,#con2{
+    margin: 0px 0px 20px 0px;
+}
+.contact #contactinfo #head1,#head2,#head3{
+    color: white;
+    text-shadow: 1px 1px 4px black;
+}
+#copyright{
+    grid-column: 1/3;
+    text-align: center;
+}
+#copyright #links img{
+    margin: 20px 35px;
+    transition-duration: 0.2s;
+    box-shadow: none;
+}
+
+/* Hover Properties */
+header .menu ul #item1:hover,a #sub1:hover,#sub2:hover,#sub3:hover,#sub4:hover,#sub5:hover,#sub6:hover{
+    background: rgb(47, 166, 212);
+    color: white;
+    text-shadow: 1px 1px 2px black;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.contact #copyright #links img:hover{
+    cursor: pointer;
+    transform: translateY(-4px);
+    box-shadow: 1px 1px 2px black;
+}
+
+main .achievement #items div #img1:hover,#img2:hover{
+    height: 270px;
+}
+/* Animation Properties here */
+@keyframes SlideImages{
+    0%{
+        transform: translateX(0px);
+    }
+    5%{
+        transform: translateX(-1000px);
+    }
+    25%{
+        transform: translateX(-1000px);
+    }
+    30%{
+        transform: translateX(-2000px);
+    }
+    50%{
+        transform: translateX(-2000px);
+    }
+    55%{
+        transform: translateX(-3000px);
+    }
+    75%{
+        transform: translateX(-3000px);
+    }
+    80%{
+        transform: translateX(-4000px);
+    }
+    100%{
+        transform: translateX(-4000px);
+    }
+}
+
+
+@media(max-width:1360px){
+    header .hamburger{
+        width: calc(100vw - 40px);
+    }
+    header .sticky{
+        width: 100%;
+    }
+}
+@media(max-width:900px){
+    main .imageSlider img{
+        width: 800px;
+    }
+    main .imageSlider{
+        display: flex;
+        overflow: hidden;
+        /* border: 2px solid black; */
+        width: 800px;
+        margin: auto; 
+        margin-top: 70px; 
+        align-items: center;
+        height: fit-content;
+    }
+    main .imageSlider #image1,#image2,#image3,#image4,#image5{
+        margin: 30px 0px;
+        animation: SlideImages_new 20s linear infinite;
+        z-index: -1;
+    }
+    @keyframes SlideImages_new{
+        0%{
+            transform: translateX(0px);
+        }
+        5%{
+            transform: translateX(-800px);
+        }
+        25%{
+            transform: translateX(-800px);
+        }
+        30%{
+            transform: translateX(-1600px);
+        }
+        50%{
+            transform: translateX(-1600px);
+        }
+        55%{
+            transform: translateX(-2400px);
+        }
+        75%{
+            transform: translateX(-2400px);
+        }
+        80%{
+            transform: translateX(-3200px);
+        }
+        100%{
+            transform: translateX(-3200px);
+        }
+    }
+}
+@media(max-width:750px){
+    main .imageSlider img{
+        width: 650px;
+    }
+    main .imageSlider{
+        width: 650px;
+    }
+    main .imageSlider #image1,#image2,#image3,#image4,#image5{
+        margin: 30px 0px;
+        animation: SlideImages_new 20s linear infinite;
+        z-index: -1;
+    }
+    main .AboutSchool #p1{
+        font-size: 30px;
+    }
+    main .AboutSchool #p2{
+        font-size: 18px;
+    }
+    main .AboutSchool #p3{
+        margin: 20px 0px 0px 0px;
+        font-size: 15px;
+    }
+    
+    /* ABout My Qualification */
+    main .qualification{
+        display: grid;
+        text-align: center;
+        /* border: 1px solid black; */
+        height: fit-content;
+        padding: 40px 50px;
+    }
+    main .qualification #item #madhyamik{
+        order: -1;
+    }
+    main .qualification #item #subhead1{
+        order: -1;
+    }
+    main .qualification #item{
+        display: flex;
+        flex-direction: column;
+        height: fit-content;
+        text-align: center;
+    }
+    main .qualification #heading{
+        /* border: 1px solid black; */
+        font-size: 30px;
+    }
+    main .qualification #item #subhead1,#subhead2,#madhyamik,#higherSecondary{
+        border: 2px solid black;
+        height: fit-content;
+    }
+    main .qualification #item #madhyamik,#higherSecondary{
+        line-height: 30px;
+        font-size: 15px;
+        padding: 20px;
+    }
+    main .qualification #item #subhead1,#subhead2{
+        font-size: 20px;
+    }
+    main .qualification #item #subhead1 p,#subhead2 p{
+        font-size: 16px;
+    }
+
+    main .achievement{
+        height: fit-content;
+        /* border: 1px solid black; */
+        height: fit-content;
+        padding: 40px 50px;
+    }
+    main .achievement #heading{
+        /* border: 1px solid black; */
+        font-size: 30px;
+    }
+    main .achievement #items{
+        display: flex;
+        height: fit-content;
+    }
+    main .achievement #items div,#award{
+        padding:15px;
+        /* border: 1px solid black; */
+        font-size: 15px;
+    }
+    main .achievement #items div{
+        width: 300px;
+    }
+    main .achievement #items div #img1{
+        display: inline-block;
+        transition-duration: 0.4s;
+    }
+    main .achievement #items div #img2{
+        float: none;
+        transition-duration: 0.2s;
+    }
+    main .achievement #items ul li{
+        line-height: 50px;
+        padding: 30px 0px;
+    }
+    @keyframes SlideImages_new{
+        0%{
+            transform: translateX(0px);
+        }
+        5%{
+            transform: translateX(-650px);
+        }
+        25%{
+            transform: translateX(-650px);
+        }
+        30%{
+            transform: translateX(-1300px);
+        }
+        50%{
+            transform: translateX(-1300px);
+        }
+        55%{
+            transform: translateX(-1950px);
+        }
+        75%{
+            transform: translateX(-1950px);
+        }
+        80%{
+            transform: translateX(-2600px);
+        }
+        100%{
+            transform: translateX(-2600px);
+        }
+    }
+}
+@media (max-width:800px){
+    .contact{
+        padding: 20px;
+    }
+    #contactinfo,#map,#copyright{
+        padding: 0px;
+        margin: auto;
+    }
+    #contactinfo #heading{
+        font-size: 20px;
+        margin: 0px 0px 25px 0px;
+        font-weight: 600;
+    }
+    #contactinfo #con1,#con2{
+        margin: 0px 0px 20px 0px;
+    }
+    .contact #contactinfo #head1,#head2,#head3{
+        font-size: 15px;
+        color: white;
+        text-shadow: 1px 1px 4px black;
+    }
+    .contact #map img{
+        height: 180px;
+        margin: auto;
+    }
+    #copyright #links img{
+        margin: 20px 20px;
+        transition-duration: 0.2s;
+        height: 30px;
+    }
+    .contact{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    #contactinfo #heading{
+        font-size: 20px;
+    }
+}
+
+@media(max-width:600px){
+    header .menu #items #subAcademic_phone,#subDownloads_phone,#subProjects_phone{
+        display: none;
+        margin: 0px 4px;
+        font-size: 12px;
+    }
+    header .menu #items #subAcademic_phone li,#subDownloads_phone li ,#subProjects_phone li{
+        padding: 15px 20px;
+        margin: 2px 10px;
+        border: 2px solid black;
+    }
+    header .menu #items{
+        height: fit-content;
+        background-image: linear-gradient(rgb(240, 240, 131),rgb(252, 199, 199));
+        border: 0.5px solid black;
+        width: 350px;
+        position: absolute;
+        z-index: 5;
+        display: inline-block;
+        font-size: 15px;
+        box-shadow: 2px 2px 10px black;
+        width: 99.6%;
+    }
+    header .menu{
+        transform: translateX(-450px);
+        transition-timing-function: linear;
+        transition-duration: 0.2s;
+        position: fixed;
+        top: 78px;
+        left: 0;
+        width: 99.6%;
+        z-index: 10;
+    }
+    header .stickyMenu{
+        top: 54px;
+    }
+}
+
+@media(max-width:550px){
+    header .hamburger #heading{
+        font-size: 20px;
+    }
+    main .imageSlider img{
+        width: 400px;
+        height: 300px;
+    }
+    main .imageSlider{
+        display: flex;
+        overflow: hidden;
+        /* border: 2px solid black; */
+        width: 400px;
+        margin: auto; 
+        margin-top: 70px; 
+        align-items: center;
+        height: fit-content;
+    }
+    main .imageSlider #image1,#image2,#image3,#image4,#image5{
+        margin: 30px 0px;
+        animation: SlideImages_new 20s linear infinite;
+        z-index: -1;
+    }
+    @keyframes SlideImages_new{
+        0%{
+            transform: translateX(0px);
+        }
+        5%{
+            transform: translateX(-400px);
+        }
+        25%{
+            transform: translateX(-400px);
+        }
+        30%{
+            transform: translateX(-800px);
+        }
+        50%{
+            transform: translateX(-800px);
+        }
+        55%{
+            transform: translateX(-1200px);
+        }
+        75%{
+            transform: translateX(-1200px);
+        }
+        80%{
+            transform: translateX(-1600px);
+        }
+        100%{
+            transform: translateX(-1600px);
+        }
+    }
+}
+
+@media(max-width:530px){
+    main .achievement{
+        height: fit-content;
+        /* border: 1px solid black; */
+        height: fit-content;
+        padding: 40px 50px;
+    }
+    main .achievement #heading{
+        /* border: 1px solid black; */
+        font-size: 30px;
+    }
+    main .achievement #items{
+        display: flex;
+        flex-direction: column;
+        height: fit-content;
+    }
+    main .achievement #items div,#award{
+        padding:15px;
+        /* border: 1px solid black; */
+        font-size: 15px;
+    }
+    main .achievement #items div{
+        width: 300px;
+    }
+    main .achievement #items div #img1{
+        display: inline-block;
+        transition-duration: 0.4s;
+    }
+    main .achievement #items div #img2{
+        float: none;
+        transition-duration: 0.2s;
+    }
+    main .achievement #items ul li{
+        line-height: 50px;
+        padding: 30px 0px;
+    }
+}
+@media(max-width:450px){
+    main .qualification{
+        padding: 40px 10px;
+    }
+}
+@media(max-width:400px){
+    main .imageSlider img{
+        width: 320px;
+        height: 200px;
+    }
+    main .imageSlider{
+        width: 320px;
+    }
+    main .imageSlider #image1,#image2,#image3,#image4,#image5{
+        margin: 30px 0px;
+        animation: SlideImages_new 20s linear infinite;
+        z-index: -1;
+    }
+    main .AboutSchool #p1{
+        font-size: 25px;
+    }
+    main .AboutSchool #p2{
+        font-size: 15px;
+    }
+    main .AboutSchool #p3{
+        margin: 20px 0px 0px 0px;
+        font-size: 13px;
+    }
+    main .qualification #item #madhyamik{
+        order: -1;
+    }
+    main .qualification #item #subhead1{
+        order: -1;
+    }
+    main .qualification #heading{
+        /* border: 1px solid black; */
+        font-size: 25px;
+    }
+    main .qualification #item #subhead1,#subhead2,#madhyamik,#higherSecondary{
+        border: 2px solid black;
+        height: fit-content;
+    }
+    main .qualification #item #madhyamik,#higherSecondary{
+        line-height: 30px;
+        font-size: 13px;
+        padding: 20px;
+    }
+    main .qualification #item #subhead1,#subhead2{
+        font-size: 18px;
+    }
+    main .qualification #item #subhead1 p,#subhead2 p{
+        font-size: 15px;
+    }
+    main .qualification #item img{
+        height: 150px;
+    }
+    main .achievement #heading{
+        /* border: 1px solid black; */
+        font-size: 25px;
+    }
+    main .achievement #items{
+        display: flex;
+        height: fit-content;
+    }
+    main .achievement #items div,#award{
+        padding:15px;
+        /* border: 1px solid black; */
+        font-size: 13px;
+    }
+    main .achievement #items div{
+        width: 300px;
+    }
+    main .achievement #items div img{
+        height: 150px;
+    }
+    main .achievement #items div #img1{
+        display: inherit;
+        transition-duration: 0.4s;
+    }
+    main .achievement #items div #img2{
+        float: none;
+        transition-duration: 0.2s;
+    }
+    main .achievement #items ul li{
+        line-height: 50px;
+        padding: 30px 0px;
+    }
+
+    @keyframes SlideImages_new{
+        0%{
+            transform: translateX(0px);
+        }
+        5%{
+            transform: translateX(-320px);
+        }
+        25%{
+            transform: translateX(-320px);
+        }
+        30%{
+            transform: translateX(-640px);
+        }
+        50%{
+            transform: translateX(-640px);
+        }
+        55%{
+            transform: translateX(-960px);
+        }
+        75%{
+            transform: translateX(-960px);
+        }
+        80%{
+            transform: translateX(-1280px);
+        }
+        100%{
+            transform: translateX(-1280px);
+        }
+    }
+}
+
+
+@media(max-width:300px){
+    header .hamburger #heading{
+        font-size: 15px;
+    }
+    main .imageSlider img{
+        width: 270px;
+        height: 180px;
+    }
+    main .imageSlider{
+        width: 270px;
+    }
+    main .imageSlider #image1,#image2,#image3,#image4,#image5{
+        margin: 30px 0px;
+        animation: SlideImages_new 20s linear infinite;
+        z-index: -1;
+    }
+    main .AboutSchool #p1{
+        font-size: 25px;
+    }
+    main .AboutSchool #p2{
+        font-size: 15px;
+    }
+    main .AboutSchool #p3{
+        margin: 20px 0px 0px 0px;
+        font-size: 13px;
+    }
+    main .qualification #item #madhyamik{
+        order: -1;
+    }
+    main .qualification #item #subhead1{
+        order: -1;
+    }
+    main .qualification #heading{
+        /* border: 1px solid black; */
+        font-size: 25px;
+    }
+    main .qualification #item #subhead1,#subhead2,#madhyamik,#higherSecondary{
+        border: 2px solid black;
+        height: fit-content;
+    }
+    main .qualification #item #madhyamik,#higherSecondary{
+        line-height: 30px;
+        font-size: 13px;
+        padding: 20px;
+    }
+    main .qualification #item #subhead1,#subhead2{
+        font-size: 18px;
+    }
+    main .qualification #item #subhead1 p,#subhead2 p{
+        font-size: 15px;
+    }
+    main .qualification #item img{
+        height: 150px;
+    }
+    main .achievement #heading{
+        /* border: 1px solid black; */
+        font-size: 25px;
+    }
+    main .achievement #items{
+        display: flex;
+        height: fit-content;
+    }
+    main .achievement #items div,#award{
+        padding:15px;
+        /* border: 1px solid black; */
+        font-size: 13px;
+    }
+    main .achievement #items div{
+        width: 300px;
+    }
+    main .achievement #items div img{
+        height: 150px;
+    }
+    main .achievement #items div #img1{
+        display: inherit;
+        transition-duration: 0.4s;
+    }
+    main .achievement #items div #img2{
+        float: none;
+        transition-duration: 0.2s;
+    }
+
+    @keyframes SlideImages_new{
+        0%{
+            transform: translateX(0px);
+        }
+        5%{
+            transform: translateX(-270px);
+        }
+        25%{
+            transform: translateX(-270px);
+        }
+        30%{
+            transform: translateX(-540px);
+        }
+        50%{
+            transform: translateX(-540px);
+        }
+        55%{
+            transform: translateX(-810px);
+        }
+        75%{
+            transform: translateX(-810px);
+        }
+        80%{
+            transform: translateX(-1080px);
+        }
+        100%{
+            transform: translateX(-1080px);
+        }
+    }
+}

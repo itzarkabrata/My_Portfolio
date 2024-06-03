@@ -1,0 +1,34 @@
+{
+    "list": [
+        {
+            "name" : "Personal Portfolio Website",
+            "githubLink" : "https://github.com/itzarkabrata/Personal_Portfolio",
+            "techStack" : "HTML, CSS, JavaScript, JavaScript AOS",
+            "image" : "/image/portfolio_newimage.png"
+        },
+        {
+            "name" : "Phone Mart API",
+            "githubLink" : "https://github.com/itzarkabrata/PhoneMartAPI",
+            "techStack" : "Node Js, Express Js, Firebase Realtime Database",
+            "image" : "/image/rest_api.png"
+        },
+        {
+            "name" : "Todo Chrome Extension",
+            "githubLink" : "https://github.com/itzarkabrata/To-Do-Extension",
+            "techStack" : "HTML, CSS, JavaScript, Browser LocalStorage",
+            "image" : "/image/extension2.PNG"
+        },
+        {
+            "name" : "Electronics Market Sales Analysis",
+            "githubLink" : "https://github.com/itzarkabrata/Sales_Analysis_Project",
+            "techStack" : "Python, Numpy, Pandas, Matplotlib",
+            "image" : "/image/DataAnalysis.webp"
+        },
+        {
+            "name" : "MyNest - A paying Guest Web Application",
+            "githubLink" : "https://github.com/itzarkabrata/GuestifyV2",
+            "techStack" : "React Js, Node Js, Express Js, Firebase, Javascript AOS",
+            "image" : "/image/logofinal.png"
+        }
+    ]
+}
